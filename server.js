@@ -1,6 +1,9 @@
 let express = require("express");
 let exphbs = require("express-handlebars");
 let bodyParser = require("body-parser");
+
+require("dotenv").config();
+
 let db = require("./models");
 
 let PORT = process.env.PORT || 8080;
