@@ -22,4 +22,8 @@ app.use((req, res, next) => {
 require("./routing/api-routes")(app);
 require("./routing/html-routes")(app);
 
-app.listen(PORT, () => console.log(`app listening on port ${PORT}`));
+db.sequelize.sync()
+	.then(() => {
+		app.listen(PORT, () => 
+			console.log(`app is listening on PORT ${PORT}`))
+	})
