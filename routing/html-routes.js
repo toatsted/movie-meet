@@ -1,6 +1,8 @@
 module.exports = function(app){
 	
 	app.get("/", (req, res) => {
-		res.send("index page");
+					res.send(`
+					<h1>Index page</h1>
+									`);
 	})
 }
