@@ -10,9 +10,14 @@ module.exports = function(schema, DataTypes){
 			allowNull: false
 		},
 
-		agerange: {
+		ageRange: {
 			type: DataTypes.STRING,
 			allowNull: false
+		},
+
+		love: {
+			type: DataTypes.BOOLEAN,
+			defaultValue: false
 		}
 	}, {
 		timestamps: false

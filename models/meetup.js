@@ -9,7 +9,17 @@ module.exports = function(schema, DataTypes){
 		},
 
 		scheduleTime: {
-			type: DataTypes.DATE
+			type: DataTypes.STRING
+		},
+
+		going: {
+			type: DataTypes.STRING,
+			defaultValue: null
+		},
+
+		maybe: {
+			type: DataTypes.STRING,
+			defaultValue: null
 		}
 	}, {
 		timestamps: false
