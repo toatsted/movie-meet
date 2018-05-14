@@ -1,5 +1,5 @@
-module.exports = function(schema, DataTypes){
-	return schema.define("Meetup", {
+function model(schema, DataTypes){
+	let Meetup = schema.define("Meetup", {
 		event: {
 			type: DataTypes.STRING
 		},
@@ -23,5 +23,9 @@ module.exports = function(schema, DataTypes){
 		}
 	}, {
 		timestamps: false
-	})
+	});
+
+	return Meetup;
 }
+
+module.exports = model;

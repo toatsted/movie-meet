@@ -1,5 +1,5 @@
-module.exports = function(schema, DataTypes){
-	return schema.define("User", {
+function model(schema, DataTypes) {
+	let User = schema.define("User", {
 		name: {
 			type: DataTypes.STRING,
 			allowNull: false
@@ -22,4 +22,14 @@ module.exports = function(schema, DataTypes){
 	}, {
 		timestamps: false
 	})
+
+	User.associate = function(models) {
+		User.hasMany(models.Rating, {
+			onDelete: "cascade"
+		});
+	}
+
+	return User;
 }
+
+module.exports = model;
